@@ -1,4 +1,5 @@
-
+//Please Refer to the Java Code Files uploaded in other folders for all the function i.e. insert(),reverseList() for better understanding
+//This code is just an insight of how i implemented the solution in simplest possible way
 
 public class LinkedList
 {
@@ -43,7 +44,30 @@ public class LinkedList
 			cur = cur.next;
 		}
 		System.out.println();
-	}	
+	}
+	
+	public static LinkedList reverseList(LinkedList list)
+	{
+		Node cur = list.head;
+		Node prev = null;
+		Node Next = null;
+		if(cur==null)
+		{
+			return null;
+		}
+		else
+		{
+		while(cur!=null)
+		{
+			Next = cur.next;
+			cur.next = prev;
+			prev = cur;
+			cur = Next;
+		}
+		list.head = prev;
+		return list;
+		}
+	}
 	
 	public static void palindromeList(LinkedList list)
 	{
