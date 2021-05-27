@@ -1,6 +1,6 @@
 //Please Refer to the Java Code Files uploaded in other folders for all the function i.e. insert(),reverseList() for better understanding
 //This code is just an insight of how i implemented the solution in simplest possible way
-
+import java.lang.*;
 public class LinkedList
 {
 	Node head;
@@ -93,6 +93,33 @@ public class LinkedList
 			cur2 = cur2.next;
 		}
 		if(flag == 1)
+		{
+			System.out.println("Linked List is Palindrome");
+		}
+		else
+		{
+			System.out.println("Linked List is not Palindrome");
+		}
+	}
+	
+	// this is another simple implementation of checking list is palindrome or not
+	// however this approach only gives correct output when the data in node is single digit i.e. A,B,1,2 etc.
+	public static void ispal(LinkedList list)
+	{
+		Node cur = list.head;
+		String s1 = "";
+		while(cur!=null)
+		{
+			s1 = s1 + cur.data;
+			cur=cur.next;
+		}
+		s1 = s1.trim();
+		StringBuilder s2 = new StringBuilder(s1);
+		StringBuilder revS = s2.reverse();
+		String r = revS.toString();
+		System.out.println(s1);
+		System.out.println(r);
+		if(s1.equals(r))
 		{
 			System.out.println("Linked List is Palindrome");
 		}
