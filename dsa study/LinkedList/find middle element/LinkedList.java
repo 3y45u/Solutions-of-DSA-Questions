@@ -68,6 +68,17 @@ public class LinkedList
 		System.out.println(cur.data+" : is the middle element");
 	}
 	
+	public static void findMiddle2(LinkedList list)// this is the efficient approach to find middle element
+	{
+		Node fast=list.head,slow=list.head;
+		while(fast!=null && fast.next!=null)
+		{
+			fast=fast.next.next;
+			slow=slow.next;
+		}
+		System.out.println("The Middle Element is : "+slow.data);
+	}
+	
 	public static void main(String[] args) 
 	{
 		LinkedList list = new LinkedList();
