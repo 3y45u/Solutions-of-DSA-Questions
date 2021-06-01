@@ -80,12 +80,17 @@ public class LinkedList
 	public static void main(String[] args) 
 	{
 		LinkedList list = new LinkedList();
-		list = insert(list,1);
-		list = insert(list,2);
-		list = insert(list,3);
-		list = insert(list,4);
-		list = insert(list,5);
-		list.head.next.next.next.next=list.head.next.next;
+		list = insert(list,25);
+		list = insert(list,14);
+		list = insert(list,19);
+		list = insert(list,33);
+		list = insert(list,10);
+		list = insert(list,21);
+		list = insert(list,39);
+		list = insert(list,90);
+		list = insert(list,58);
+		list = insert(list,45);
+		list.head.next.next.next.next.next.next.next.next.next=list.head.next.next.next;
 		detectLoop(list);
 		
 		LinkedList list2 = new LinkedList();
