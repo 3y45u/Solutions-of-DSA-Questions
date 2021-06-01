@@ -35,6 +35,7 @@ public class LinkedList
 
 	public static void detectLoop(LinkedList list)
 	{
+		int count = 0;
 	    Node slow=list.head,fast=list.head;
 	    boolean flag=false;
 		if(list.head==null || list.head.next==null)
@@ -50,7 +51,8 @@ public class LinkedList
             {
                 fast = list.head;
                 while (fast != slow) 
-                {                    
+                {    
+                	
                     fast = fast.next;
                     slow = slow.next;
                 }
@@ -58,9 +60,15 @@ public class LinkedList
                 break;
             }
         }
+        fast=slow.next;
+        while(fast!=slow && fast!=null && fast.next!=null)
+        {
+        	fast=fast.next;
+        	count+=1;
+        }
         if(flag==true)
         {
-            System.out.println("Loop detected at : "+slow.data);
+            System.out.println("Loop detected at : "+slow.data+" and length of loop is : "+(count+2));
         }
         else
         {
