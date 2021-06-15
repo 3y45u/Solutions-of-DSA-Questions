@@ -1,3 +1,4 @@
+//This code is using the manual creation of stack and then using it for solving
 class Stack
 {
     int capacity = 2;
