@@ -1,3 +1,5 @@
+// this code is done using the Stack class already present in java
+// only the function is written for checking the balanced brackets, also write the main function yourself
 import java.util.*;
 class Solution {
     public boolean isValid(String s) {
